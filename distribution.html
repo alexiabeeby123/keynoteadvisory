@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Artist Consulting & Management - Keynote Advisory</title>
+  <title>Music Distribution Services - Keynote Advisory</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../style.css">
   <style>
@@ -150,6 +150,23 @@
       font-weight: 400;
     }
     
+    /* Platform Grid */
+    .platform-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin: 30px 0;
+    }
+    .platform-box {
+      background: rgba(255, 255, 255, 0.08);
+      padding: 20px;
+      text-align: center;
+      font-size: 16px;
+      font-weight: 600;
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    
     /* Pull Quote */
     .pull-quote {
       font-size: 36px;
@@ -162,30 +179,6 @@
       border-top: 3px solid #fff;
       border-bottom: 3px solid #fff;
       text-align: center;
-    }
-    
-    /* Process Boxes */
-    .process-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      margin: 60px 0;
-    }
-    .process-box {
-      background: transparent;
-      padding: 40px;
-      border: 2px solid rgba(255, 255, 255, 0.2);
-    }
-    .process-number {
-      font-size: 64px;
-      font-weight: 900;
-      color: rgba(255, 255, 255, 0.15);
-      line-height: 1;
-      margin-bottom: 20px;
-    }
-    .process-box h4 {
-      margin-top: 0;
-      font-size: 22px;
     }
     
     /* Feature Boxes */
@@ -312,8 +305,8 @@
         grid-template-columns: 1fr;
         gap: 60px;
       }
-      .process-grid {
-        grid-template-columns: 1fr;
+      .platform-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
       .sidebar {
         position: relative;
@@ -342,145 +335,171 @@
     </a>
 
     <div class="service-hero">
-      <div class="service-number">02</div>
-      <h1>Artist Consulting<br>& Management</h1>
-      <p class="lead">Strategic career guidance that transforms creative talent into sustainable business success</p>
+      <div class="service-number">06</div>
+      <h1>Music Distribution<br>Services</h1>
+      <p class="lead">Global digital distribution ensuring your music reaches audiences worldwide while capturing every stream and download</p>
     </div>
 
     <div class="editorial-columns">
       <aside class="sidebar">
-        <div class="section-label">Impact</div>
+        <div class="section-label">Performance</div>
         
         <div class="sidebar-stat">
-          <span class="stat-number">150%</span>
-          <span class="stat-label">Revenue Increase</span>
+          <span class="stat-number">95%</span>
+          <span class="stat-label">Faster Delivery</span>
         </div>
         
         <div class="sidebar-stat">
-          <span class="stat-number">5x</span>
-          <span class="stat-label">Operational Efficiency</span>
+          <span class="stat-number">99.8%</span>
+          <span class="stat-label">Acceptance Rate</span>
         </div>
         
         <div class="sidebar-stat">
-          <span class="stat-number">3x</span>
-          <span class="stat-label">Partnership Growth</span>
+          <span class="stat-number">100%</span>
+          <span class="stat-label">Royalty Accuracy</span>
         </div>
         
         <div class="sidebar-stat">
-          <span class="stat-number">80%</span>
-          <span class="stat-label">Less Admin Time</span>
+          <span class="stat-number">150+</span>
+          <span class="stat-label">Platforms Worldwide</span>
         </div>
       </aside>
 
       <article class="main-content">
         <div class="content-section">
-          <p class="dropcap">Keynote Advisory provides comprehensive career consulting and management services for artists at every stage of development. From emerging talent building their first audience to established acts optimizing their business operations, we deliver the strategic expertise that allows artists to make informed decisions and build careers that last.</p>
+          <p class="dropcap">Keynote Advisory delivers comprehensive music distribution services that place your releases on all major streaming platforms and digital stores worldwide. From metadata optimization and ISRC management to release coordination and revenue analytics, we provide the infrastructure and expertise to maximize your music's reach and income potential.</p>
         </div>
 
         <div class="content-section">
-          <h2>Core Services</h2>
+          <h2>Global Platforms</h2>
           
-          <h4>Brand Development</h4>
-          <p>Define and refine your artistic identity, visual aesthetic, narrative positioning, and audience targeting. We help you develop a cohesive brand that resonates with your ideal audience and differentiates you in a crowded market.</p>
+          <h4>Streaming Services</h4>
+          <div class="platform-grid">
+            <div class="platform-box">Spotify</div>
+            <div class="platform-box">Apple Music</div>
+            <div class="platform-box">Amazon Music</div>
+            <div class="platform-box">YouTube Music</div>
+            <div class="platform-box">Tidal</div>
+            <div class="platform-box">Deezer</div>
+            <div class="platform-box">Pandora</div>
+            <div class="platform-box">SoundCloud</div>
+            <div class="platform-box">Anghami</div>
+          </div>
 
-          <h4>Release Planning</h4>
-          <p>Strategic timing, format selection, rollout sequencing, and campaign architecture for singles, EPs, albums, and visual projects. We ensure every release serves your long-term career objectives while maximizing immediate impact.</p>
+          <h4>Download Stores</h4>
+          <div class="platform-grid">
+            <div class="platform-box">iTunes</div>
+            <div class="platform-box">Amazon MP3</div>
+            <div class="platform-box">Google Play</div>
+            <div class="platform-box">7digital</div>
+            <div class="platform-box">Beatport</div>
+            <div class="platform-box">Bandcamp</div>
+          </div>
 
-          <h4>Tour Strategy</h4>
-          <p>Route planning, venue selection, budget modeling, promotional integration, and touring economics. We help you build a live performance strategy that grows your audience, generates revenue, and supports your creative vision.</p>
-
-          <h4>Revenue Optimization</h4>
-          <p>Identify, develop, and maximize income streams across recordings, publishing, live performance, merchandise, licensing, partnerships, and digital platforms. We help you build diversified revenue that provides financial stability.</p>
+          <h4>Social Platforms</h4>
+          <div class="platform-grid">
+            <div class="platform-box">TikTok</div>
+            <div class="platform-box">Instagram</div>
+            <div class="platform-box">Facebook</div>
+            <div class="platform-box">Snapchat</div>
+            <div class="platform-box">Triller</div>
+            <div class="platform-box">Audiomack</div>
+          </div>
         </div>
 
         <div class="pull-quote">
-          "Data-driven strategy. Artist-centered execution. Career-defining results."
+          "Every platform. Every territory. Every listener reached."
         </div>
 
         <div class="content-section">
-          <h2>Artist Development Process</h2>
+          <h2>Advanced Services</h2>
           
-          <div class="process-grid">
-            <div class="process-box">
-              <div class="process-number">01</div>
-              <h4>Assessment</h4>
-              <p>Comprehensive evaluation of current positioning, audience, revenue, team, and opportunities. We identify strengths to leverage and gaps to address.</p>
-            </div>
+          <h4>Metadata Optimization</h4>
+          <p>Proper metadata is critical for discoverability, playlist consideration, and accurate royalty payment. We ensure complete and accurate artist, track, and album information; genre and mood tags optimized for algorithmic recommendations; credits and contributor information; language and territory-specific metadata; and cover art meeting platform specifications.</p>
 
-            <div class="process-box">
-              <div class="process-number">02</div>
-              <h4>Strategy</h4>
-              <p>Development of a customized roadmap with clear objectives, action items, timelines, and success metrics. This becomes your operational playbook.</p>
-            </div>
+          <h4>ISRC & UPC Management</h4>
+          <p>Unique identifier codes that track your music's usage: ISRC (International Standard Recording Code) for each track, UPC (Universal Product Code) for each release, proper code registration and database linkage, and code tracking for sampling and remixes.</p>
 
-            <div class="process-box">
-              <div class="process-number">03</div>
-              <h4>Execution</h4>
-              <p>Implementation of strategies with ongoing management, coordination, and optimization. We handle the business so you can focus on the art.</p>
-            </div>
+          <h4>Release Coordination</h4>
+          <p>Strategic release execution including release date selection and scheduling, pre-save and pre-add campaign setup, coordinated multi-platform launches, territory-specific release strategies, version management (clean, explicit, instrumental), and takedown and redelivery when needed.</p>
 
-            <div class="process-box">
-              <div class="process-number">04</div>
-              <h4>Evolution</h4>
-              <p>Continuous analysis and adjustment based on performance data, market changes, and career goals. Your strategy evolves as you grow.</p>
-            </div>
-          </div>
+          <h4>Revenue Analytics</h4>
+          <p>Comprehensive reporting on your distribution performance: real-time dashboard access, streaming and download numbers by platform, revenue breakdown by territory and platform, trend analysis and comparative performance, playlist and algorithmic radio tracking, and fan demographic data.</p>
         </div>
 
         <div class="content-section">
-          <h2>Service Tiers</h2>
+          <h2>Distribution Models</h2>
           
           <div class="feature-grid">
             <div class="feature-box">
-              <h4>Consultation Services</h4>
+              <h4>Standard Distribution</h4>
               <ul class="service-list">
-                <li>Project-based strategic advisory</li>
-                <li>Deal evaluation and negotiation support</li>
-                <li>Career audits and optimization plans</li>
-                <li>Industry introduction and networking</li>
+                <li>Annual fee per artist/label</li>
+                <li>Unlimited releases</li>
+                <li>100% royalty retention</li>
+                <li>No commission on earnings</li>
+                <li>Access to all platforms</li>
+                <li>Basic analytics dashboard</li>
               </ul>
             </div>
 
             <div class="feature-box">
-              <h4>Management Services</h4>
+              <h4>Premium Distribution</h4>
               <ul class="service-list">
-                <li>Full-service career management</li>
-                <li>Day-to-day operations and coordination</li>
-                <li>Team building and oversight</li>
-                <li>Financial administration</li>
-                <li>Strategic planning and execution</li>
+                <li>Enhanced metadata optimization</li>
+                <li>Priority release coordination</li>
+                <li>Advanced analytics and insights</li>
+                <li>Dedicated account support</li>
+                <li>Playlist pitching assistance</li>
+                <li>Marketing integration</li>
               </ul>
             </div>
 
             <div class="feature-box">
-              <h4>Executive Services</h4>
+              <h4>Label Distribution</h4>
               <ul class="service-list">
-                <li>High-level strategic advisory for established artists</li>
-                <li>Business development and partnerships</li>
-                <li>Portfolio and investment guidance</li>
-                <li>Legacy planning and catalog management</li>
+                <li>Multi-artist management</li>
+                <li>Sub-label capabilities</li>
+                <li>Custom workflow integration</li>
+                <li>Team collaboration tools</li>
+                <li>White-label reporting</li>
+                <li>API access</li>
               </ul>
             </div>
           </div>
         </div>
 
+        <div class="content-section">
+          <h2>Why Distribution Matters</h2>
+          
+          <h3>Global Reach</h3>
+          <p>Proper distribution ensures your music is available in 100+ countries on 150+ platforms. Without comprehensive distribution, you're leaving entire markets unreachable.</p>
+
+          <h3>Royalty Capture</h3>
+          <p>Streaming and download platforms only pay for properly registered, identifiable music. Poor metadata or missing ISRC codes mean lost royalties that can never be recovered.</p>
+
+          <h3>Career Intelligence</h3>
+          <p>Distribution analytics reveal where your fans are located, which tracks resonate most, how listeners discover your music, demographic breakdowns for targeting, and growth trends and breakthrough moments. This data informs tour routing, marketing spend, collaboration opportunities, and creative decisions.</p>
+        </div>
+
         <div class="stats-highlight">
-          <h3>Investment & Results</h3>
-          <p>Our clients typically see:</p>
+          <h3>Distribution Performance</h3>
+          <p>Keynote Advisory distributed releases average:</p>
           <ul>
-            <li>150% increase in annual revenue within 24 months</li>
-            <li>5x improvement in operational efficiency</li>
-            <li>3x growth in strategic partnership opportunities</li>
-            <li>80% reduction in time spent on administrative tasks</li>
+            <li>95% faster platform delivery than industry standard</li>
+            <li>99.8% acceptance rate on first submission</li>
+            <li>100% royalty accuracy with zero accounting discrepancies</li>
+            <li>30-day payment cycles (compared to 90+ days industry average)</li>
+            <li>150+ platform availability worldwide</li>
           </ul>
         </div>
       </article>
     </div>
 
     <div class="cta-box">
-      <h3>Begin Your Journey</h3>
-      <p>Ready to build a sustainable music career with expert guidance? Schedule a consultation with Keynote Advisory to discuss your current position and goals.</p>
-      <a href="../index.html#consult" class="cta-button">Contact Us</a>
+      <h3>Get Your Music Everywhere</h3>
+      <p>Ready to ensure your music reaches every possible listener while capturing every earned dollar? Contact Keynote Advisory to discuss distribution needs.</p>
+      <a href="../index.html#consult" class="cta-button">Start Distributing</a>
     </div>
   </div>
 
