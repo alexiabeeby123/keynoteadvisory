@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Publishing & Rights Administration - Keynote Advisory</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .service-detail {
+      max-width: 1400px;
+      margin: 100px auto 60px;
+      padding: 0 80px;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: rgba(255, 255, 255, 0.6);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 60px;
+      transition: all 0.3s ease;
+      border-bottom: 1px solid transparent;
+    }
+    .back-link:hover {
+      color: #fff;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    }
+    
+    /* Magazine Hero */
+    .service-hero {
+      margin-bottom: 100px;
+      border-bottom: 3px solid rgba(255, 255, 255, 0.2);
+      padding-bottom: 60px;
+    }
+    .service-number {
+      font-size: 120px;
+      font-weight: 900;
+      line-height: 1;
+      color: rgba(255, 255, 255, 0.08);
+      margin-bottom: -40px;
+    }
+    .service-hero h1 {
+      font-size: 80px;
+      font-weight: 900;
+      line-height: 0.95;
+      letter-spacing: -3px;
+      color: #fff;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+    }
+    .service-hero .lead {
+      font-size: 28px;
+      font-weight: 400;
+      font-style: italic;
+      color: rgba(255, 255, 255, 0.7);
+      max-width: 900px;
+      line-height: 1.4;
+      border-left: 3px solid #fff;
+      padding-left: 40px;
+      margin-top: 40px;
+    }
+    
+    /* Editorial Layout */
+    .editorial-columns {
+      display: grid;
+      grid-template-columns: 350px 1fr;
+      gap: 80px;
+      margin: 80px 0;
+    }
+    .sidebar {
+      position: sticky;
+      top: 140px;
+      height: fit-content;
+    }
+    .section-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.4);
+      margin-bottom: 20px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .sidebar-stat {
+      margin: 40px 0;
+    }
+    .stat-number {
+      font-size: 56px;
+      font-weight: 900;
+      color: #fff;
+      line-height: 1;
+      display: block;
+      margin-bottom: 10px;
+    }
+    .stat-label {
+      font-size: 14px;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.5);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    /* Main Content */
+    .main-content {
+      max-width: 700px;
+    }
+    .dropcap::first-letter {
+      font-size: 72px;
+      font-weight: 900;
+      line-height: 0.8;
+      float: left;
+      margin: 8px 12px 0 0;
+      color: #fff;
+    }
+    .content-section h2 {
+      font-size: 56px;
+      font-weight: 900;
+      color: #fff;
+      margin: 80px 0 40px;
+      letter-spacing: -2px;
+      line-height: 1.1;
+      text-transform: uppercase;
+    }
+    .content-section h3 {
+      font-size: 32px;
+      font-weight: 800;
+      color: #fff;
+      margin: 60px 0 20px;
+      letter-spacing: -1px;
+    }
+    .content-section h4 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #fff;
+      margin: 40px 0 15px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .content-section p {
+      font-size: 19px;
+      line-height: 1.8;
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 25px;
+      font-weight: 400;
+    }
+    
+    /* Pull Quote */
+    .pull-quote {
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 1.3;
+      color: #fff;
+      font-style: italic;
+      margin: 60px 0;
+      padding: 40px 0;
+      border-top: 3px solid #fff;
+      border-bottom: 3px solid #fff;
+      text-align: center;
+    }
+    
+    /* Warning Box */
+    .warning-box {
+      background: rgba(255, 255, 255, 0.08);
+      border: 2px solid #fff;
+      padding: 60px;
+      margin: 80px 0;
+    }
+    .warning-box h4 {
+      font-size: 28px;
+      margin-top: 0;
+      text-transform: uppercase;
+      letter-spacing: -1px;
+    }
+    
+    /* Feature Boxes */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      margin: 60px 0;
+    }
+    .feature-box {
+      background: transparent;
+      padding: 40px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .feature-box:last-child {
+      border-bottom: none;
+    }
+    .feature-box h4 {
+      font-size: 24px;
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+    .feature-box p, .feature-box ul {
+      font-size: 17px;
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.75);
+    }
+    
+    /* Stats Highlight */
+    .stats-highlight {
+      background: rgba(255, 255, 255, 0.05);
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      padding: 60px;
+      margin: 80px 0;
+    }
+    .stats-highlight h3 {
+      font-size: 42px;
+      margin-top: 0;
+      margin-bottom: 40px;
+      text-transform: uppercase;
+    }
+    .stats-highlight ul {
+      list-style: none;
+      padding: 0;
+    }
+    .stats-highlight li {
+      font-size: 22px;
+      font-weight: 600;
+      color: #fff;
+      margin: 25px 0;
+      padding-left: 40px;
+      position: relative;
+    }
+    .stats-highlight li:before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      color: #fff;
+      font-weight: 900;
+    }
+    
+    /* CTA Box */
+    .cta-box {
+      background: #fff;
+      color: #8fa5b5;
+      padding: 80px 60px;
+      text-align: center;
+      margin: 100px 0 80px;
+    }
+    .cta-box h3 {
+      margin-top: 0;
+      font-size: 48px;
+      color: #8fa5b5;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: -1px;
+    }
+    .cta-box p {
+      font-size: 20px;
+      margin-bottom: 40px;
+      color: rgba(143, 165, 181, 0.8);
+    }
+    .cta-button {
+      display: inline-block;
+      padding: 20px 50px;
+      background: #8fa5b5;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+      border: 2px solid #8fa5b5;
+    }
+    .cta-button:hover {
+      background: transparent;
+      color: #8fa5b5;
+    }
+    
+    ul.service-list {
+      list-style: none;
+      padding: 0;
+    }
+    ul.service-list li {
+      padding: 15px 0 15px 30px;
+      font-size: 18px;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.8);
+      position: relative;
+    }
+    ul.service-list li:before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #fff;
+      font-size: 28px;
+      line-height: 1;
+    }
+    
+    /* Responsive */
+    @media (max-width: 968px) {
+      .editorial-columns {
+        grid-template-columns: 1fr;
+        gap: 60px;
+      }
+      .sidebar {
+        position: relative;
+        top: 0;
+      }
+      .service-hero h1 {
+        font-size: 56px;
+      }
+      .service-detail {
+        padding: 0 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="glass-nav">
+    <a href="../index.html#about">About</a>
+    <a href="../index.html#services">Services</a>
+    <a href="../index.html#blog">Blog</a>
+    <a href="../index.html#consult" class="consult-btn">Consult</a>
+  </nav>
+
+  <div class="service-detail">
+    <a href="../index.html#services" class="back-link">
+      ← Back to Services
+    </a>
+
+    <div class="service-hero">
+      <div class="service-number">03</div>
+      <h1>Publishing & Rights<br>Administration</h1>
+      <p class="lead">Maximize income from your compositions through comprehensive publishing services and global rights administration</p>
+    </div>
+
+    <div class="editorial-columns">
+      <aside class="sidebar">
+        <div class="section-label">Collection Record</div>
+        
+        <div class="sidebar-stat">
+          <span class="stat-number">35%</span>
+          <span class="stat-label">Income Increase</span>
+        </div>
+        
+        <div class="sidebar-stat">
+          <span class="stat-number">$15K+</span>
+          <span class="stat-label">Uncollected Found</span>
+        </div>
+        
+        <div class="sidebar-stat">
+          <span class="stat-number">95%</span>
+          <span class="stat-label">Metadata Accuracy</span>
+        </div>
+        
+        <div class="sidebar-stat">
+          <span class="stat-number">100+</span>
+          <span class="stat-label">Territories Covered</span>
+        </div>
+      </aside>
+
+      <article class="main-content">
+        <div class="content-section">
+          <p class="dropcap">Keynote Advisory delivers end-to-end music publishing services that ensure your compositions generate maximum revenue from every use across global territories. From copyright registration to royalty collection and catalog administration, we provide the infrastructure and expertise that transforms your creative work into consistent income.</p>
+        </div>
+
+        <div class="content-section">
+          <h2>Core Services</h2>
+          
+          <h4>Copyright Registration & Protection</h4>
+          <p>Comprehensive registration of your musical compositions with relevant copyright offices, performing rights organizations, and mechanical rights societies. We establish clear ownership, protect your intellectual property, and create the foundation for royalty collection.</p>
+
+          <h4>Mechanical Royalty Collection</h4>
+          <p>Collection of mechanical royalties generated by physical sales, digital downloads, and interactive streaming across all platforms and territories. We ensure every reproduction of your composition generates the income you're entitled to.</p>
+
+          <h4>Performance Royalty Administration</h4>
+          <p>Management of performance royalties from radio play, television broadcasts, live venues, streaming services, and public performance. We work with PROs globally to capture income from every public performance of your work.</p>
+
+          <h4>Catalog Administration</h4>
+          <p>Ongoing management of your entire publishing catalog including registration maintenance, metadata accuracy, ownership tracking, and dispute resolution. We keep your catalog organized and optimized for maximum income.</p>
+        </div>
+
+        <div class="pull-quote">
+          "Every use. Every territory. Every dollar collected."
+        </div>
+
+        <div class="content-section">
+          <h2>Why Publishing Matters</h2>
+          
+          <p>Many songwriters leave significant money uncollected because publishing is complex and requires specialized administration. The difference between managed and unmanaged publishing can mean hundreds of thousands in lost lifetime revenue.</p>
+
+          <h3>Multiple Income Streams</h3>
+          <p>A single composition can generate income from mechanical royalties (physical sales, downloads, streams), performance royalties (radio, TV, live performance, streaming), synchronization fees (film, TV, advertising, gaming), print royalties (sheet music), and foreign royalties (international territories).</p>
+
+          <h3>Global Collection Network</h3>
+          <p>We maintain relationships with collecting societies in over 100 territories, ensuring your international income reaches you. Without proper administration, foreign royalties often go uncollected.</p>
+        </div>
+
+        <div class="content-section">
+          <h2>Service Packages</h2>
+          
+          <div class="feature-grid">
+            <div class="feature-box">
+              <h4>Essential Publishing</h4>
+              <ul class="service-list">
+                <li>Copyright registration</li>
+                <li>PRO affiliation support</li>
+                <li>Basic royalty collection</li>
+                <li>Annual statements</li>
+              </ul>
+            </div>
+
+            <div class="feature-box">
+              <h4>Professional Publishing</h4>
+              <ul class="service-list">
+                <li>Comprehensive registration</li>
+                <li>Global mechanical & performance collection</li>
+                <li>Catalog administration</li>
+                <li>Quarterly reporting</li>
+                <li>Metadata management</li>
+              </ul>
+            </div>
+
+            <div class="feature-box">
+              <h4>Premium Publishing</h4>
+              <ul class="service-list">
+                <li>Full-service administration</li>
+                <li>Worldwide collection network</li>
+                <li>Monthly detailed reporting</li>
+                <li>Proactive rights management</li>
+                <li>Sync licensing representation</li>
+                <li>Catalog valuation & planning</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="warning-box">
+          <h4>The Publishing Gap</h4>
+          <p>Industry studies show that:</p>
+          <ul class="service-list">
+            <li>60% of songwriters don't collect all available royalties</li>
+            <li>$400M+ in royalties go uncollected globally each year</li>
+            <li>3-5 years is typical for uncollected royalties to become unrecoverable</li>
+          </ul>
+          <p><strong>Don't leave money on the table.</strong> Professional publishing administration pays for itself through increased collections.</p>
+        </div>
+
+        <div class="stats-highlight">
+          <h3>Our Collection Record</h3>
+          <p>Keynote Advisory clients typically see:</p>
+          <ul>
+            <li>35% increase in total publishing income within 12 months</li>
+            <li>$15,000+ in previously uncollected royalties identified per catalog</li>
+            <li>95% accuracy rate in metadata across platforms</li>
+            <li>100+ territory coverage for international collection</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+
+    <div class="cta-box">
+      <h3>Secure Your Income</h3>
+      <p>Ready to ensure every use of your compositions generates income? Contact Keynote Advisory for a catalog assessment.</p>
+      <a href="../index.html#consult" class="cta-button">Schedule Consultation</a>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <span>BUILT FOR SCALE</span>
+    <span>MADE FOR LEGACY</span>
+    <span>EST. 2025</span>
+  </footer>
+</body>
+</html>

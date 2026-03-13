@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contract Negotiation & Sync Licensing - Keynote Advisory</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .service-detail {
+      max-width: 1400px;
+      margin: 100px auto 60px;
+      padding: 0 80px;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: rgba(255, 255, 255, 0.6);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 60px;
+      transition: all 0.3s ease;
+      border-bottom: 1px solid transparent;
+    }
+    .back-link:hover {
+      color: #fff;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    }
+    
+    /* Magazine Hero */
+    .service-hero {
+      margin-bottom: 100px;
+      border-bottom: 3px solid rgba(255, 255, 255, 0.2);
+      padding-bottom: 60px;
+    }
+    .service-number {
+      font-size: 120px;
+      font-weight: 900;
+      line-height: 1;
+      color: rgba(255, 255, 255, 0.08);
+      margin-bottom: -40px;
+    }
+    .service-hero h1 {
+      font-size: 80px;
+      font-weight: 900;
+      line-height: 0.95;
+      letter-spacing: -3px;
+      color: #fff;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+    }
+    .service-hero .lead {
+      font-size: 28px;
+      font-weight: 400;
+      font-style: italic;
+      color: rgba(255, 255, 255, 0.7);
+      max-width: 900px;
+      line-height: 1.4;
+      border-left: 3px solid #fff;
+      padding-left: 40px;
+      margin-top: 40px;
+    }
+    
+    /* Editorial Layout */
+    .editorial-columns {
+      display: grid;
+      grid-template-columns: 350px 1fr;
+      gap: 80px;
+      margin: 80px 0;
+    }
+    .sidebar {
+      position: sticky;
+      top: 140px;
+      height: fit-content;
+    }
+    .section-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.4);
+      margin-bottom: 20px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .sidebar-highlight {
+      background: rgba(255, 255, 255, 0.08);
+      padding: 30px;
+      margin: 30px 0;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .sidebar-highlight h4 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #fff;
+      margin: 0 0 15px 0;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .sidebar-highlight p {
+      font-size: 15px;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.7);
+      margin: 0;
+    }
+    
+    /* Main Content */
+    .main-content {
+      max-width: 700px;
+    }
+    .dropcap::first-letter {
+      font-size: 72px;
+      font-weight: 900;
+      line-height: 0.8;
+      float: left;
+      margin: 8px 12px 0 0;
+      color: #fff;
+    }
+    .content-section h2 {
+      font-size: 56px;
+      font-weight: 900;
+      color: #fff;
+      margin: 80px 0 40px;
+      letter-spacing: -2px;
+      line-height: 1.1;
+      text-transform: uppercase;
+    }
+    .content-section h3 {
+      font-size: 32px;
+      font-weight: 800;
+      color: #fff;
+      margin: 60px 0 20px;
+      letter-spacing: -1px;
+    }
+    .content-section h4 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #fff;
+      margin: 40px 0 15px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .content-section p {
+      font-size: 19px;
+      line-height: 1.8;
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 25px;
+      font-weight: 400;
+    }
+    
+    /* Pull Quote */
+    .pull-quote {
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 1.3;
+      color: #fff;
+      font-style: italic;
+      margin: 60px 0;
+      padding: 40px 0;
+      border-top: 3px solid #fff;
+      border-bottom: 3px solid #fff;
+      text-align: center;
+    }
+    
+    /* Two Column */
+    .two-column {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      margin: 60px 0;
+    }
+    
+    /* Stats Highlight */
+    .stats-highlight {
+      background: rgba(255, 255, 255, 0.05);
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      padding: 60px;
+      margin: 80px 0;
+    }
+    .stats-highlight h3 {
+      font-size: 42px;
+      margin-top: 0;
+      margin-bottom: 40px;
+      text-transform: uppercase;
+    }
+    .stats-highlight h4 {
+      font-size: 24px;
+      margin: 40px 0 20px;
+    }
+    .stats-highlight ul {
+      list-style: none;
+      padding: 0;
+    }
+    .stats-highlight li {
+      font-size: 22px;
+      font-weight: 600;
+      color: #fff;
+      margin: 25px 0;
+      padding-left: 40px;
+      position: relative;
+    }
+    .stats-highlight li:before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      color: #fff;
+      font-weight: 900;
+    }
+    
+    /* CTA Box */
+    .cta-box {
+      background: #fff;
+      color: #8fa5b5;
+      padding: 80px 60px;
+      text-align: center;
+      margin: 100px 0 80px;
+    }
+    .cta-box h3 {
+      margin-top: 0;
+      font-size: 48px;
+      color: #8fa5b5;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: -1px;
+    }
+    .cta-box p {
+      font-size: 20px;
+      margin-bottom: 40px;
+      color: rgba(143, 165, 181, 0.8);
+    }
+    .cta-button {
+      display: inline-block;
+      padding: 20px 50px;
+      background: #8fa5b5;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+      border: 2px solid #8fa5b5;
+    }
+    .cta-button:hover {
+      background: transparent;
+      color: #8fa5b5;
+    }
+    
+    ul.service-list {
+      list-style: none;
+      padding: 0;
+    }
+    ul.service-list li {
+      padding: 15px 0 15px 30px;
+      font-size: 18px;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.8);
+      position: relative;
+    }
+    ul.service-list li:before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #fff;
+      font-size: 28px;
+      line-height: 1;
+    }
+    
+    /* Responsive */
+    @media (max-width: 968px) {
+      .editorial-columns {
+        grid-template-columns: 1fr;
+        gap: 60px;
+      }
+      .two-column {
+        grid-template-columns: 1fr;
+      }
+      .sidebar {
+        position: relative;
+        top: 0;
+      }
+      .service-hero h1 {
+        font-size: 56px;
+      }
+      .service-detail {
+        padding: 0 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="glass-nav">
+    <a href="../index.html#about">About</a>
+    <a href="../index.html#services">Services</a>
+    <a href="../index.html#blog">Blog</a>
+    <a href="../index.html#consult" class="consult-btn">Consult</a>
+  </nav>
+
+  <div class="service-detail">
+    <a href="../index.html#services" class="back-link">
+      ← Back to Services
+    </a>
+
+    <div class="service-hero">
+      <div class="service-number">04</div>
+      <h1>Contract Negotiation<br>& Sync Licensing</h1>
+      <p class="lead">Expert representation that protects your interests and maximizes your value in recording agreements, publishing deals, and licensing opportunities</p>
+    </div>
+
+    <div class="editorial-columns">
+      <aside class="sidebar">
+        <div class="section-label">Our Philosophy</div>
+        
+        <div class="sidebar-highlight">
+          <h4>Long-Term Thinking</h4>
+          <p>We negotiate for sustainable career growth, not just immediate payment. Terms that seem acceptable today can create problems years later.</p>
+        </div>
+        
+        <div class="sidebar-highlight">
+          <h4>Walking Away</h4>
+          <p>Some deals aren't worth taking. We're not afraid to walk away from agreements that don't serve your interests.</p>
+        </div>
+        
+        <div class="sidebar-highlight">
+          <h4>Knowledge as Power</h4>
+          <p>We ensure you understand every clause, every term, and every implication. Informed clients make better decisions.</p>
+        </div>
+      </aside>
+
+      <article class="main-content">
+        <div class="content-section">
+          <p class="dropcap">Keynote Advisory provides specialized contract negotiation services and sync licensing representation for artists, songwriters, producers, and labels. We secure favorable terms in recording agreements, publishing deals, collaboration contracts, and licensing opportunities while placing your music in film, television, advertising, and gaming projects that generate income and exposure.</p>
+        </div>
+
+        <div class="content-section">
+          <h2>Contract Negotiation</h2>
+          
+          <h4>Recording Agreements</h4>
+          <p>Expert representation in negotiations with record labels, distributors, and production companies. We ensure favorable terms on royalty rates and calculation methods, advance structures and recoupment terms, creative control provisions, rights retention and reversion clauses, territory and term limitations, marketing commitments, and option periods and release requirements.</p>
+
+          <h4>Publishing Deals</h4>
+          <p>Negotiation of publishing agreements including administration deals, co-publishing arrangements, work-for-hire agreements, sub-publishing contracts, and catalog acquisition/sale transactions. We ensure you maintain appropriate ownership, receive competitive advances, and secure favorable royalty splits.</p>
+
+          <h4>Collaboration Agreements</h4>
+          <p>Clear, enforceable contracts for producer agreements, featured artist appearances, songwriter splits, sample clearances, remix rights, and work-for-hire arrangements. Proper collaboration agreements prevent disputes and ensure everyone receives appropriate credit and compensation.</p>
+        </div>
+
+        <div class="pull-quote">
+          "Protect your value. Maximize your leverage. Secure your future."
+        </div>
+
+        <div class="content-section">
+          <h2>Sync Licensing</h2>
+          
+          <h4>Placement Opportunities</h4>
+          <p>We actively pitch your catalog to music supervisors, advertising agencies, production companies, and game developers for placement in film & television productions, advertising campaigns, video games, streaming series, corporate videos, and trailers & promos.</p>
+
+          <h4>License Negotiation</h4>
+          <p>When placement opportunities arise, we negotiate terms including license fees (upfront sync fees), usage parameters (media, territory, term), rights granted (master, composition, both), backend royalty provisions, credit requirements, and most favored nations clauses.</p>
+
+          <h4>Catalog Representation</h4>
+          <p>We maintain your catalog in professional pitch format with organized metadata and search tags, clean master and publishing rights, instrumental and alternate versions, competitive pricing structure, and quick clearance capabilities.</p>
+        </div>
+
+        <div class="content-section">
+          <h2>Our Approach</h2>
+          
+          <div class="two-column">
+            <div>
+              <h3>For Contracts</h3>
+              <p>We negotiate based on current market standards while pushing for terms that reflect your specific value and leverage. Every agreement is reviewed with decades-ahead thinking, ensuring you don't sacrifice long-term value for short-term gains.</p>
+            </div>
+            <div>
+              <h3>For Sync</h3>
+              <p>Our established relationships with music supervisors, creative directors, and production companies provide access to placement opportunities that independent artists rarely see. We handle both the creative pitch and business negotiation.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="stats-highlight">
+          <h3>The Value of Representation</h3>
+          
+          <h4>Royalty Rate Improvements</h4>
+          <ul>
+            <li>5-15% higher royalty rates in recording agreements</li>
+            <li>$50,000-250,000 higher advances for established acts</li>
+            <li>Improved recoupment terms reducing time to profitability</li>
+          </ul>
+          
+          <h4>Sync Income</h4>
+          <ul>
+            <li>$25,000 average sync fee per placement</li>
+            <li>3-5 placements annually for actively pitched catalogs</li>
+            <li>$75,000-125,000 average annual sync income for mid-level artists</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+
+    <div class="cta-box">
+      <h3>Protect Your Future</h3>
+      <p>Music industry contracts have lasting implications. Expert representation ensures you don't sacrifice long-term value for short-term gains.</p>
+      <a href="../index.html#consult" class="cta-button">Contact Us</a>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <span>BUILT FOR SCALE</span>
+    <span>MADE FOR LEGACY</span>
+    <span>EST. 2025</span>
+  </footer>
+</body>
+</html>
