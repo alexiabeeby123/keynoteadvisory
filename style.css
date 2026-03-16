@@ -2031,3 +2031,97 @@ body {
     top: 13%;
   }
 }
+@media (max-width: 768px) {
+  .services-section {
+    max-width: 1400px;
+    margin: 100px auto;
+    padding: 60px 16px;
+    opacity: 1 !important;
+    transform: none !important;
+    display: block;
+    visibility: visible;
+    overflow: visible;
+  }
+
+  .services-container {
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .services-header {
+    margin-bottom: 40px;
+  }
+
+  .services-header h2 {
+    font-size: 56px;
+    line-height: 0.95;
+    letter-spacing: -1px;
+  }
+
+  .services-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    perspective: none;
+  }
+
+  .service-card {
+    display: flex !important;
+    flex-direction: column;
+    min-height: auto;
+    opacity: 1 !important;
+    transform: none !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+  }
+
+  .service-image-large {
+    width: 100%;
+    height: 220px;
+    transform: none !important;
+  }
+
+  .service-image-large img {
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+    transform: none !important;
+  }
+
+  .service-content {
+    padding: 24px 20px;
+    transform: none !important;
+  }
+
+  .service-card h3 {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+
+  .service-card p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .service-link {
+    margin-top: 20px;
+  }
+
+  /* disable stagger animations on mobile */
+  .services-section.animate-in .service-card:nth-child(1),
+  .services-section.animate-in .service-card:nth-child(2),
+  .services-section.animate-in .service-card:nth-child(3),
+  .services-section.animate-in .service-card:nth-child(4),
+  .services-section.animate-in .service-card:nth-child(5),
+  .services-section.animate-in .service-card:nth-child(6) {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .service-card::before,
+  .service-card::after {
+    opacity: 0;
+  }
+}
