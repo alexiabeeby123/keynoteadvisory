@@ -513,16 +513,23 @@ serviceCards.forEach(card => {
 
   card.addEventListener('touchend', resetCard, { passive: true });
 });
-  // Smooth scrolling
-  document.querySelectorAll('a[href^="#"]').forEach(link => {
-    link.addEventListener('click', e => {
-      e.preventDefault();
-      const target = document.querySelector(link.getAttribute('href'));
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth' });
-      }
+ // Smooth scrolling
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const target = document.querySelector(link.getAttribute('href'));
+    if (!target) return;
+
+    const nav = document.querySelector('.glass-nav');
+    const navOffset = nav ? nav.offsetHeight + 20 : 80;
+    const targetTop = target.getBoundingClientRect().top + window.pageYOffset - navOffset;
+
+    window.scrollTo({
+      top: targetTop,
+      behavior: 'smooth'
     });
   });
+});
 
   // Contact form submission
   const form = document.getElementById("contactForm");
