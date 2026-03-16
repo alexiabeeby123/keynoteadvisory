@@ -1669,3 +1669,365 @@ body {
   transform: translateY(-5px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
+/* =========================
+   MOBILE = DESKTOP PARITY
+   Do not affect desktop
+========================= */
+@media (max-width: 768px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  body {
+    width: 100%;
+  }
+
+  /* NAV */
+  .glass-nav {
+    position: fixed;
+    top: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 24px);
+    max-width: 680px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 14px;
+    border-radius: 999px;
+    z-index: 1000;
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+  }
+
+  .glass-nav a {
+    font-size: 0.82rem;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  .consult-btn {
+    padding: 10px 14px;
+    border-radius: 999px;
+  }
+
+  /* HERO */
+  .hero-panel {
+    min-height: 100svh;
+    height: auto;
+    padding: 110px 16px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .bg-wordmark {
+    position: absolute;
+    left: 50%;
+    top: 16%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    font-size: clamp(2.4rem, 13vw, 5.5rem);
+    line-height: 0.9;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+    pointer-events: none;
+  }
+
+  .hero-title {
+    position: absolute;
+    top: 12%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 32px);
+    text-align: center;
+    font-size: clamp(1.4rem, 8vw, 3rem);
+    line-height: 0.95;
+    letter-spacing: 0.1em;
+    z-index: 3;
+  }
+
+  .smoke-effect {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .hero-image-wrapper {
+    position: relative;
+    width: min(92vw, 520px);
+    margin: 0 auto;
+    z-index: 2;
+    transform: translateY(7%);
+    will-change: transform;
+  }
+
+  .hero-image-wrapper img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  /* SHARED SECTIONS */
+  .magazine-section,
+  .about-section,
+  .services-section,
+  .blog-section,
+  .consult-section {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .magazine-container,
+  .about-container,
+  .services-container,
+  .blog-container,
+  .consult-container {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .editorial-header h2,
+  .services-header h2,
+  .blog-header h2,
+  .consult-header h2,
+  .about-container h2 {
+    font-size: clamp(2rem, 9vw, 3.6rem);
+    line-height: 0.95;
+  }
+
+  .overline {
+    font-size: 0.78rem;
+    letter-spacing: 0.18em;
+  }
+
+  .lead-text {
+    font-size: 1.06rem;
+    line-height: 1.6;
+  }
+
+  .magazine-content,
+  .about-text-columns,
+  .consult-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .content-col,
+  .about-col {
+    width: 100%;
+  }
+
+  .pull-quote {
+    margin-top: 24px;
+    font-size: clamp(1.5rem, 7vw, 2.3rem);
+    line-height: 1.05;
+  }
+
+  /* STATS */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 28px;
+  }
+
+  .stat-item {
+    padding: 18px 10px;
+    text-align: center;
+  }
+
+  .stat-number {
+    display: block;
+    font-size: clamp(1.3rem, 6vw, 2.2rem);
+  }
+
+  .stat-label {
+    display: block;
+    font-size: 0.78rem;
+    line-height: 1.3;
+  }
+
+  /* ABOUT */
+  .about-content {
+    position: relative;
+    z-index: 2;
+    padding: 70px 0;
+  }
+
+  .about-principles {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-top: 30px;
+  }
+
+  .principle-item {
+    padding: 20px 18px;
+  }
+
+  .principle-item h3 {
+    font-size: 1rem;
+    line-height: 1.35;
+  }
+
+  /* SERVICES */
+  .services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .service-card {
+    width: 100%;
+    min-height: unset;
+    transform-style: preserve-3d;
+    will-change: transform;
+  }
+
+  .service-image-large {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+  }
+
+  .service-image-large img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .service-content {
+    padding: 18px 16px 22px;
+  }
+
+  .service-number {
+    font-size: 0.82rem;
+    margin-bottom: 10px;
+  }
+
+  .service-card h3 {
+    font-size: 1.2rem;
+    line-height: 1.2;
+  }
+
+  .service-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  /* BLOG */
+  .blog-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .blog-card {
+    width: 100%;
+  }
+
+  .blog-content {
+    padding: 20px 18px;
+  }
+
+  .blog-card h3 {
+    font-size: 1.18rem;
+    line-height: 1.25;
+  }
+
+  /* CONSULT */
+  .consult-form {
+    width: 100%;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    min-height: 52px;
+    padding: 14px 14px;
+    font-size: 16px; /* prevents iOS zoom */
+    border-radius: 14px;
+  }
+
+  .form-group textarea {
+    min-height: 140px;
+    resize: vertical;
+  }
+
+  .submit-btn {
+    width: 100%;
+    min-height: 54px;
+    justify-content: center;
+    border-radius: 999px;
+  }
+
+  .consult-info {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .info-card {
+    padding: 18px 16px;
+  }
+
+  /* FOOTER */
+  .footer {
+    padding: 20px 16px 30px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    text-align: center;
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 480px) {
+  .glass-nav {
+    gap: 8px;
+    padding: 10px 12px;
+  }
+
+  .glass-nav a {
+    font-size: 0.74rem;
+  }
+
+  .consult-btn {
+    padding: 9px 12px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bg-wordmark {
+    font-size: clamp(2rem, 12vw, 4rem);
+    top: 18%;
+  }
+
+  .hero-title {
+    font-size: clamp(1.2rem, 7vw, 2rem);
+    top: 13%;
+  }
+}
