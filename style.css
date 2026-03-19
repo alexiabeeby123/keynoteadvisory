@@ -2223,3 +2223,13 @@ body {
     word-break: break-word;
   }
 }
+@media (max-width: 768px) {
+  .services-header h2 {
+    font-size: clamp(2.4rem, 7.2vw, 3rem);
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+    word-break: keep-all;
+    overflow-wrap: normal;
+    hyphens: none;
+  }
+}
