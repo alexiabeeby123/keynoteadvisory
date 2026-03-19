@@ -2220,7 +2220,7 @@ body {
   span,
   li {
     overflow-wrap: anywhere;
-    word-break: break-word;
+    word-break: keep-all;
   }
 }
 @media (max-width: 768px) {
